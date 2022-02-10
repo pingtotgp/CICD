@@ -31,6 +31,12 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        livenessProbe:
+            httpGet:
+                  path: /maven-web-application
+                  port: liveness-port
+            failureThreshold: 1
+            periodSeconds: 10
         resources:
           requests:
             cpu: 300m
