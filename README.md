@@ -3,7 +3,7 @@
 
 Project on End to End CI/CD pipeline for java based application using Git,Github,Jenkins,Maven,Sonarqube,Nexus,Slack,Docker and Kuberenetes with ECR as private docker registry, HAproxy Load balancer and Zero Downtime Deployment.
 
-
+![arch](https://github.com/pingtotgp/CICD/blob/main/images/arch.JPG)
 
 ----
 
