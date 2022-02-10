@@ -42,20 +42,22 @@ Note: We can add an approval step before deploying to K8s cluster as an input fr
 
 ## Installing Let's Encrypt
 
-```sh
+
 
 Install certbot
 -----------
- 
+
+```sh
 
 [ec2-user@haproxy-lb ~]$ sudo yum install certbot
 
- 
+```
+
 
 Now give the below configuration in the /etc/haproxy/haproy.cfg file.
 
  
-
+```sh
 -------------------------------------------
 
 frontend http_front
@@ -76,7 +78,7 @@ backend letsencrypt-backend
 
   server letsencrypt 127.0.0.1:8888
 
--------------------------------------------
+```
 
 The complete HAproxy.cfg file is provided in the repo.
  
@@ -84,6 +86,6 @@ The complete HAproxy.cfg file is provided in the repo.
 Make sure that the port 8888 , 443 is allowed in your securitygroup.
 
  
-
+```sh
 [ec2-user@haproxy-lb ~]$ systemctl restart haproxy
 ```
